@@ -1,29 +1,36 @@
 {
   "manifest_version": 3,
-  "name": "Nom de votre extension",
+  "name": "Complétion d'objets",
   "version": "1.0",
-  "description": "Description de votre extension",
+  "description": "Complétion d'objets de mail avec API OpenAI",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "128": "poster.png"
     }
   },
+
+  "background": {
+    "service_worker": "content.js"
+  },
+
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ],
+
   "host_permissions": [
     "https://mail.google.com/*",
-    "https://api.openai.com/"
+    "https://api.openai.com/*"
   ],
+
   "content_scripts": [
     {
       "matches": ["https://mail.google.com/*"],
       "js": ["content.js"]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
-  }
+
+  "apiKey": "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"
 }

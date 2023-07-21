@@ -1,16 +1,5 @@
 {
-  "name": "objet-extension",
-  "version": "1.0.0",
-  "description": "",
-  "main": "background.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "axios": "^1.4.0",
-    "openai": "^3.3.0"
+    "dotenv": "^16.3.1"
   }
 }
